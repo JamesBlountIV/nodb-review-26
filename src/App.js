@@ -3,6 +3,7 @@ import React from "react";
 //components
 import AddDestination from "./components/AddDestination";
 import MyDestinations from "./components/MyDestinations";
+import axios from "axios";
 
 class App extends React.Component {
   constructor() {
@@ -12,6 +13,7 @@ class App extends React.Component {
     }
   }
 
+
   render() {
     return (
       <div>
@@ -19,7 +21,7 @@ class App extends React.Component {
           <button onClick={() => this.setState({currentPage: "add"})}>Add Place</button>
           <button onClick={() => this.setState({currentPage: "view"})}>View Places</button>
         </nav>
-        <h1>App Component</h1>
+        <h1>TRIVAGO</h1>
         {
           this.state.currentPage === "add" 
         ?
